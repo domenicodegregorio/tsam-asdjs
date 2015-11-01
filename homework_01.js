@@ -17,6 +17,29 @@ function ex_1_R (a) {
     return sumAllR (a);
 }
 
+function sumOdd (n) {
+    res = 0;
+    for (i = 0; i < n; i++) {
+    res += 1 + 2 * i;
+    }
+    return res;
+}
+function ex_2_I (n) {
+    return sumOdd(n);
+}
+
+function sumOddR (n) {
+    if (n == 0) {
+        return 0;
+    } else {
+        return sumOddR(n-1) + 2 * n - 1;
+    }
+}
+function ex_2_R (n) {
+    return sumOddR(n);
+}
+
+
 function ex_3_I(a) {
     sum = 0;
     for (i = 0; i < a.length; i++) {
