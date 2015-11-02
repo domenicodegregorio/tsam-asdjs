@@ -58,3 +58,22 @@ function mediaR(a) {
 function ex_3_R (a) {
     return (mediaR(a) / a.length);
 }
+
+function moltiplica (x, y)
+          {
+            var i;
+            var z = 0;
+            //
+            for (i = 1; i <= y; i++)
+              {
+                z = z + x;
+              }
+            return z;
+        }
+//per Tiziano
+function ex_5_I(a,b) {
+        return moltiplica (a,b);
+}
+
+
+
