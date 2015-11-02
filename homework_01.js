@@ -75,5 +75,23 @@ function ex_5_I(a,b) {
         return moltiplica (a,b);
 }
 
+function dividi (x, y)
+        {
+            var z = 0;
+            var i = x;
+            //
+            while (i >= y)
+              {
+                i = i - y;
+                z++;
+              }
+              a = ([z,(x % y)])
+            return a;
+        }
+
+        //per Tiziano
+function ex_6_I(a,b) {
+    return dividi(a,b);
+}
 
 
