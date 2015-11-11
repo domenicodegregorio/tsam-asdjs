@@ -6,16 +6,18 @@ function ex_1_I(a) {
     return sum;
 }
 
-function sumAllR(a) {
-    if (a.length == 0) { 
+function sumwhilenegR(myarray) {
+    if (myarray.length == 0 || myarray[0] < 0) {
         return 0;
-    } else { 
-        return a[0] + sumAllR(a.slice(1)); 
+    } else {
+        return myarray[0] + sumwhilenegR(myarray.slice(1));
     }
 }
-function ex_1_R (a) {
-    return sumAllR (a);
+
+function ex_1_R(x) {
+    return sumwhilenegR(x);
 }
+
 
 function sumOdd (n) {
     res = 0;
@@ -59,6 +61,49 @@ function ex_3_R (a) {
     return (mediaR(a) / a.length);
 }
 
+function sumIntervalW(a, b) {
+    var tot = 0;
+    for(var i = a; i <= b; i++) {
+        tot += i;
+    }
+    return tot;
+}
+
+function sumInterval(a, b) {
+    if (a < b){
+        return sumIntervalW(a, b);
+    } else {
+        return sumIntervalW(b, a);
+    }
+}
+
+function sumIntervalRW(a, b) {
+    if (a == b) {
+        return a;
+    } else {
+        return a + sumIntervalRW(a + 1, b);
+    }
+
+
+}
+
+function sumIntervalR(a, b) {
+    if (a < b){
+        return sumIntervalRW(a, b);
+    } else {
+        return sumIntervalRW(b, a);
+    }
+}
+
+
+// Per Tiziano
+function ex_4_I(x, y) {
+    return sumInterval(x, y);
+}
+
+function ex_4_R(x, y) {
+    return sumIntervalR(x, y);
+}
 function moltiplica (x, y)
           {
             var i;
@@ -93,5 +138,26 @@ function dividi (x, y)
 function ex_6_I(a,b) {
     return dividi(a,b);
 }
+
+
+function pot (x, y)
+        {
+            var z = 1;
+            var i;
+            //
+            for (i = 1; i <= y; i++)
+              {
+                z = z * x;
+              }
+            return z;
+        }
+
+//per Tiziano
+
+function ex_7_I (a,b) {
+        return pot(a,b);
+}
+
+
 
 
