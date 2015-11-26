@@ -311,3 +311,19 @@ Data una lista di interi A, si riordini gli elementi della lista in modo tale ch
 dispari precedano nello stesso ordine tutti gli elementi pari.
 */
 
+function sort(a) {
+    var even = [];
+    var odd = [];
+    for (var i=0; i<a.length; i++) {
+        if (a[i] % 2 == 0) {
+            
+            even.push(a[i]);
+        }
+        else {
+            odd.push(a[i]);
+        }
+    }
+
+    return odd.concat(even);
+}
+
